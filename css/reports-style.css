@@ -1,0 +1,208 @@
+/* ============================================= */
+/* CSS para a Página de Relatórios (Dashboard)  */
+/* ============================================= */
+
+/* ---- Layout Principal da Página ---- */
+.reports-page {
+    padding: 2rem 0 5rem 0;
+}
+
+/* ---- Estilo do Cabeçalho da Página ---- */
+.page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.page-header h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #343A40;
+}
+.page-header p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    max-width: 600px;
+    margin: 0.5rem auto 0;
+}
+
+/* ---- Barra de Filtros ---- */
+.filters-bar {
+    margin-bottom: 2rem;
+    display: flex;
+}
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+.filter-group label {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+.filter-group select {
+    padding: 0.8rem;
+    border: 1px solid #DEE2E6;
+    border-radius: 8px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    background-color: #FFFFFF;
+}
+
+/* ---- Grade de Estatísticas Rápidas ---- */
+.stats-grid { 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+.stat-card { 
+    background: #FFFFFF; 
+    border-radius: 8px; 
+    padding: 1.5rem; 
+    border-left: 5px solid; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.stat-card.green-border { border-left-color: #009A44; }
+.stat-card.blue-border { border-left-color: #005A9C; }
+.stat-card.yellow-border { border-left-color: #FFD700; }
+.stat-card h4 { font-weight: 800; margin-bottom: 0.5rem; font-size: 1.1rem; }
+.stat-numbers { display: flex; align-items: baseline; gap: 0.5rem;}
+.stat-numbers strong { font-size: 2.5rem; font-weight: 800; line-height: 1; }
+.stat-numbers span { font-size: 1rem; color: #6c757d; font-weight: 600; }
+
+/* ---- Grade do Dashboard ---- */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Grid de 3 colunas */
+    gap: 2rem;
+}
+.report-widget {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #DEE2E6;
+}
+/* Widgets que ocupam mais espaço */
+.report-widget.large {
+    grid-column: span 2; /* Ocupa 2 colunas */
+}
+.report-widget.full-width {
+    grid-column: span 3; /* Ocupa 3 colunas (largura total) */
+}
+.widget-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #343A40;
+}
+
+/* ---- Estilo do Gráfico de Barras ---- */
+.bar-chart {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 250px;
+}
+.bar-item { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; width: 50px; }
+.bar-item .bar { background-color: #009A44; width: 100%; border-radius: 4px 4px 0 0; position: relative; transition: all 0.3s ease; }
+.bar-item .bar:hover { background-color: #007A33; transform: translateY(-5px); }
+.bar-item .bar:hover::after { content: attr(data-value); position: absolute; top: -25px; left: 50%; transform: translateX(-50%); background-color: #343A40; color: #FFFFFF; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: 700; }
+.bar-item .label { font-size: 0.9rem; font-weight: 600; }
+
+/* ---- Estilo do Gráfico de Pizza (Donut) ---- */
+.donut-chart-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 250px;
+}
+.donut-chart {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: relative;
+    /* As cores representam os valores (95% para individual, 5% para coletivo) */
+    background: conic-gradient(#005A9C 0% 5%, #FFD700 5% 100%);
+}
+/* Cria o "buraco" no meio do gráfico de pizza */
+.donut-chart::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    background: #FFFFFF;
+    border-radius: 50%;
+}
+.chart-legend {
+    list-style: none;
+    padding: 0;
+}
+.chart-legend li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+.chart-legend .legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    margin-right: 0.8rem;
+}
+
+
+/* ---- Estilo da Tabela ---- */
+.table-wrapper {
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #DEE2E6;
+    white-space: nowrap;
+}
+thead {
+    background-color: #F8F9FA;
+}
+th {
+    font-weight: 700;
+    color: #6c757d;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+tbody tr:last-child td {
+    border-bottom: none;
+}
+tbody tr:hover {
+    background-color: #F8F9FA;
+}
+
+/* ---- Responsividade do Painel ---- */
+@media(max-width: 992px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr 1fr; /* 2 colunas em tablets */
+    }
+    .report-widget.full-width {
+        grid-column: span 2;
+    }
+}
+@media(max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr; /* 1 coluna em celulares */
+    }
+    .report-widget.large, .report-widget.full-width {
+        grid-column: span 1;
+    }
+    .donut-chart-area {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

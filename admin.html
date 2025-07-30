@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo - Mapa Cultural</title>
+    <link rel="stylesheet" href="css/admin-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <aside class="admin-sidebar">
+            <div class="sidebar-logo">
+                <a href="index.html" class="logo">
+                    <img src="images/Brasao-novo.jpg" alt="Logo Mapa Cultural">
+                    <span>Mapa Cultural <br><strong>Boa Viagem</strong></span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="#">Meu Painel</a></li>
+                    <li><a href="#">Gerenciar Eventos</a></li>
+                    <li><a href="#">Gerenciar Espaços</a></li>
+                    <li><a href="perfil.html">Meu Perfil</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-logout">
+                <a href="index.html">Sair da Plataforma</a>
+            </div>
+        </aside>
+
+        <main class="admin-content">
+            <header class="admin-header">
+                <h1>Bem-vindo, Agente Cultural!</h1>
+                <p>Aqui você gerencia suas informações e contribui para o mapa cultural da cidade.</p>
+            </header>
+
+            <section class="dashboard-widgets">
+                <div class="widget-card">
+                    <span class="widget-value">5</span>
+                    <span class="widget-label">Eventos Cadastrados</span>
+                </div>
+                <div class="widget-card">
+                    <span class="widget-value">2</span>
+                    <span class="widget-label">Espaços Gerenciados</span>
+                </div>
+                <div class="widget-card">
+                    <span class="widget-value">1</span>
+                    <span class="widget-label">Perfil de Agente</span>
+                </div>
+            </section>
+
+            <section class="quick-actions">
+                <h2>Ações Rápidas</h2>
+                <div class="action-buttons">
+                    <a href="#" class="btn btn-primary">+ Adicionar Novo Evento</a>
+                    <a href="#" class="btn btn-secondary">+ Cadastrar Novo Espaço</a>
+                </div>
+            </section>
+
+            <section class="content-table-section">
+                <h2>Seus Eventos Recentes</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Título do Evento</th>
+                                <th>Data</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Arraiá de Boa Viagem</td>
+                                <td>30/07/2025</td>
+                                <td><span class="status status-published">Publicado</span></td>
+                                <td>
+                                    <a href="#" class="btn-action btn-edit">Editar</a>
+                                    <a href="#" class="btn-action btn-delete">Excluir</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Show com Nando Reis</td>
+                                <td>15/08/2025</td>
+                                <td><span class="status status-published">Publicado</span></td>
+                                <td>
+                                    <a href="#" class="btn-action btn-edit">Editar</a>
+                                    <a href="#" class="btn-action btn-delete">Excluir</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Oficina de Xilogravura (rascunho)</td>
+                                <td>A definir</td>
+                                <td><span class="status status-draft">Rascunho</span></td>
+                                <td>
+                                    <a href="#" class="btn-action btn-edit">Editar</a>
+                                    <a href="#" class="btn-action btn-delete">Excluir</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

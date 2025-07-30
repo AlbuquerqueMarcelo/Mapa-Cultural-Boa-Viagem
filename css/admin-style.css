@@ -1,0 +1,406 @@
+/* ---- Reset e Configurações Globais ---- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: #343A40;
+    background-color: #F8F9FA;
+    font-size: 16px;
+}
+
+/* ---- Estrutura Principal do Painel ---- */
+.admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ---- Barra Lateral (Sidebar) ---- */
+.admin-sidebar {
+    width: 260px;
+    flex-shrink: 0; /* Impede que a sidebar encolha */
+    background-color: #FFFFFF;
+    border-right: 1px solid #DEE2E6;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-logo .logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #343A40;
+    margin-bottom: 2rem;
+}
+.sidebar-logo .logo img {
+    height: 40px;
+}
+.sidebar-logo .logo strong {
+    color: #009A44;
+}
+
+.sidebar-nav {
+    flex-grow: 1;
+}
+.sidebar-nav ul {
+    list-style: none;
+}
+.sidebar-nav a {
+    display: block;
+    text-decoration: none;
+    color: #6c757d;
+    font-weight: 700;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: all 0.2s ease;
+}
+.sidebar-nav a:hover {
+    background-color: #F8F9FA;
+    color: #009A44;
+}
+.sidebar-nav li.active a {
+    background-color: #009A44;
+    color: #FFFFFF;
+}
+
+.sidebar-logout a {
+    text-decoration: none;
+    color: #6c757d;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    padding: 0.8rem 1rem;
+}
+.sidebar-logout a:hover {
+    color: #e63946;
+}
+
+/* ---- Conteúdo Principal ---- */
+.admin-content {
+    flex-grow: 1;
+    padding: 2rem 3rem;
+    width: 100%;
+}
+
+.admin-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #DEE2E6;
+    padding-bottom: 1.5rem;
+}
+.admin-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #343A40;
+}
+.admin-header p {
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+.mobile-menu-btn {
+    display: none; /* Escondido em telas grandes */
+}
+
+/* ---- Widgets de Resumo ---- */
+.dashboard-widgets {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.widget-card {
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #DEE2E6;
+}
+.widget-card .widget-value {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #009A44;
+    display: block;
+}
+.widget-card .widget-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6c757d;
+}
+
+/* ---- Seção de Ações Rápidas ---- */
+.quick-actions {
+    margin-bottom: 3rem;
+}
+.quick-actions h2 {
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+}
+.btn {
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+.btn-primary {
+    background-color: #009A44;
+    color: #FFFFFF;
+}
+.btn-primary:hover {
+    background-color: #007A33;
+}
+.btn-secondary {
+    background-color: #FFFFFF;
+    color: #343A40;
+    border: 2px solid #DEE2E6;
+}
+.btn-secondary:hover {
+    border-color: #009A44;
+    color: #009A44;
+}
+
+
+/* ---- Tabela de Conteúdo ---- */
+.content-table-section h2 {
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+.table-wrapper {
+    background-color: #FFFFFF;
+    border: 1px solid #DEE2E6;
+    border-radius: 8px;
+    overflow-x: auto; /* Permite rolagem horizontal em telas pequenas */
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #DEE2E6;
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+}
+thead {
+    background-color: #F8F9FA;
+}
+th {
+    font-weight: 700;
+    color: #6c757d;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+tbody tr:last-child td {
+    border-bottom: none;
+}
+tbody tr:hover {
+    background-color: #F8F9FA;
+}
+
+.status {
+    padding: 0.3rem 0.6rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+.status-published {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+.status-draft {
+    background-color: #e0e7ff;
+    color: #3730a3;
+}
+
+.btn-action {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+}
+.btn-edit {
+    color: #005A9C;
+}
+.btn-edit:hover {
+    background-color: #e0e7ff;
+}
+.btn-delete {
+    color: #e63946;
+}
+.btn-delete:hover {
+    background-color: #fee2e2;
+}
+
+
+/* ---- Estilos para Formulário de Perfil ---- */
+.profile-form {
+    background-color: #FFFFFF;
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid #DEE2E6;
+}
+
+.form-section {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #DEE2E6;
+}
+.form-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.form-section h2 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+}
+.form-section .section-description {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="file"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #DEE2E6;
+    border-radius: 8px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #009A44;
+    box-shadow: 0 0 0 3px rgba(0, 154, 68, 0.1);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.profile-picture-group {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.profile-picture-preview {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+/* Overlay para o menu mobile */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+.overlay.is-active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+/* ---- MEDIA QUERIES PARA RESPONSIVIDADE DO PAINEL ---- */
+@media (max-width: 992px) {
+    .admin-sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        z-index: 100;
+        transform: translateX(-100%);
+    }
+    .admin-sidebar.is-open {
+        transform: translateX(0);
+    }
+
+    .admin-content {
+        padding: 1.5rem;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 40px;
+        height: 40px;
+        background: #F8F9FA;
+        border: 1px solid #DEE2E6;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    .mobile-menu-btn span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #343A40;
+        border-radius: 2px;
+        transition: all 0.3s ease-in-out;
+    }
+    .mobile-menu-btn.is-active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    .mobile-menu-btn.is-active span:nth-child(2) {
+        opacity: 0;
+    }
+    .mobile-menu-btn.is-active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Dados - Mapa Cultural</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reports-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/Brasao-novo.jpg" alt="Logo Mapa Cultural">
+                <span>Mapa Cultural <br><strong>Boa Viagem</strong></span>
+            </a>
+            <a href="login.html" class="login-button">Entrar</a>
+        </div>
+    </header>
+
+    <main class="reports-page">
+        <div class="container">
+            <header class="page-header">
+                <h1>Painel de Dados</h1>
+                <p>Visualize dados e gráficos sobre o cenário cultural de Boa Viagem de forma interativa.</p>
+            </header>
+
+            <section class="filters-bar">
+                <div class="filter-group">
+                    <label for="period">Filtrar por Período</label>
+                    <select id="period">
+                        <option>Últimos 30 dias</option>
+                        <option>Últimos 3 meses</option>
+                        <option selected>Todo o período</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="stats-grid">
+                <div class="stat-card yellow-border">
+                    <h4>Agentes Individuais</h4>
+                    <div class="stat-numbers">
+                        <div><strong>28.819</strong><span>cadastrados</span></div>
+                    </div>
+                </div>
+                <div class="stat-card blue-border">
+                     <h4>Agentes Coletivos</h4>
+                    <div class="stat-numbers">
+                        <div><strong>1.293</strong><span>cadastrados</span></div>
+                    </div>
+                </div>
+                <div class="stat-card green-border">
+                    <h4>Oportunidades</h4>
+                    <div class="stat-numbers">
+                        <div><strong>270</strong><span>criadas</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-grid">
+                
+                <div class="report-widget large">
+                    <h3 class="widget-title">Agentes por Área de Atuação</h3>
+                    <div class="bar-chart">
+                        <div class="bar-item">
+                            <div class="bar" style="height: 100%;" data-value="1.500"></div>
+                            <span class="label">Música</span>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar" style="height: 80%;" data-value="1.200"></div>
+                            <span class="label">Artesanato</span>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar" style="height: 65%;" data-value="950"></div>
+                            <span class="label">Cultura Popular</span>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar" style="height: 50%;" data-value="750"></div>
+                            <span class="label">Dança</span>
+                        </div>
+                        <div class="bar-item">
+                            <div class="bar" style="height: 45%;" data-value="600"></div>
+                            <span class="label">Teatro</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="report-widget">
+                    <h3 class="widget-title">Proporção de Agentes</h3>
+                    <div class="donut-chart-area">
+                        <div class="donut-chart"></div>
+                        <ul class="chart-legend">
+                            <li><span class="legend-color" style="background-color: #FFD700;"></span>Agentes Individuais</li>
+                            <li><span class="legend-color" style="background-color: #005A9C;"></span>Agentes Coletivos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="report-widget full-width">
+                    <h3 class="widget-title">Top 5 Eventos Populares</h3>
+                     <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Evento</th>
+                                    <th>Categoria</th>
+                                    <th>Data</th>
+                                    <th>Visualizações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Arraiá de Boa Viagem</td>
+                                    <td>Festa Popular</td>
+                                    <td>30/07/2025</td>
+                                    <td><strong>12.345</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Show com Nando Reis</td>
+                                    <td>Show</td>
+                                    <td>15/08/2025</td>
+                                    <td><strong>9.876</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Festival de Violeiros</td>
+                                    <td>Cultura Popular</td>
+                                    <td>05/09/2025</td>
+                                    <td><strong>8.765</strong></td>
+                                </tr>
+                                 <tr>
+                                    <td>Mostra de Cinema do Sertão</td>
+                                    <td>Audiovisual</td>
+                                    <td>10/10/2025</td>
+                                    <td><strong>7.654</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>25ª Feira do Livro</td>
+                                    <td>Literatura</td>
+                                    <td>22/11/2025</td>
+                                    <td><strong>6.543</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2025 Mapa Cultural de Boa Viagem. Uma iniciativa da Secretaria de Cultura.</p>
+            <nav>
+                <a href="#">Sobre o Mapa</a>
+                <a href="#">Termos de Uso</a>
+                <a href="#">Contato</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>

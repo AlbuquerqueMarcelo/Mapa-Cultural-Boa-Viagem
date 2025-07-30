@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - Mapa Cultural</title>
+    <link rel="stylesheet" href="css/admin-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <aside class="admin-sidebar">
+            <div class="sidebar-logo">
+                <a href="index.html" class="logo">
+                    <img src="images/Brasao-novo.jpg" alt="Logo Mapa Cultural">
+                    <span>Mapa Cultural <br><strong>Boa Viagem</strong></span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="admin.html">Meu Painel</a></li>
+                    <li><a href="#">Gerenciar Eventos</a></li>
+                    <li><a href="#">Gerenciar Espaços</a></li>
+                    <li class="active"><a href="perfil.html">Meu Perfil</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-logout">
+                <a href="index.html">Sair da Plataforma</a>
+            </div>
+        </aside>
+
+        <main class="admin-content">
+            <header class="admin-header">
+                <h1>Meu Perfil</h1>
+                <p>Mantenha suas informações públicas e de acesso sempre atualizadas.</p>
+            </header>
+
+            <form class="profile-form">
+                <div class="form-section">
+                    <h2>Informações Públicas</h2>
+                    <p class="section-description">Estes dados serão exibidos em seu perfil público de agente cultural.</p>
+                    
+                    <div class="form-group profile-picture-group">
+                        <img src="https://images.unsplash.com/photo-1521119989659-a83eee488004?q=80&w=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Foto do Perfil" class="profile-picture-preview">
+                        <div>
+                            <label for="profile-picture">Foto de Perfil</label>
+                            <input type="file" id="profile-picture">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="artistic-name">Nome Artístico / Nome do Grupo</label>
+                        <input type="text" id="artistic-name" value="Grupo Teatral Sol do Sertão">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bio">Biografia / Sobre</label>
+                        <textarea id="bio" rows="6">Coletivo que explora temas do cotidiano sertanejo em suas peças, buscando valorizar a cultura e as histórias da nossa gente.</textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="area">Principal Área de Atuação</label>
+                        <select id="area">
+                            <option>Música</option>
+                            <option selected>Teatro</option>
+                            <option>Artesanato</option>
+                            <option>Dança</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2>Contato e Redes Sociais</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="phone">Telefone (WhatsApp)</label>
+                            <input type="text" id="phone" value="(88) 99999-8888">
+                        </div>
+                        <div class="form-group">
+                            <label for="instagram">Instagram</label>
+                            <input type="text" id="instagram" value="@soldosertaoteatro">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-section">
+                    <h2>Informações da Conta</h2>
+                    <p class="section-description">Estes dados são privados e usados para acessar a plataforma.</p>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="email">Email de Acesso</label>
+                            <input type="email" id="email" value="contato@soldosertao.com.br">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Nova Senha</label>
+                            <input type="password" id="password" placeholder="Deixe em branco para não alterar">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
