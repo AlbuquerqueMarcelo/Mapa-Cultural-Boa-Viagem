@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaços Culturais - Mapa Cultural de Boa Viagem</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/list-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/Brasao-novo.jpg" alt="Logo Mapa Cultural">
+                <span>Mapa Cultural <br><strong>Boa Viagem</strong></span>
+            </a>
+            <nav class="main-nav">
+                <a href="agentes.html">Agentes</a>
+                <a href="espacos.html">Espaços</a>
+                <a href="eventos.html">Eventos</a>
+            </nav>
+            <a href="login.html" class="login-button">Entrar</a>
+        </div>
+    </header>
+
+    <main class="list-page">
+        <div class="container">
+            <header class="page-header">
+                <h1>Espaços Culturais</h1>
+                <p>Explore os teatros, centros culturais, bibliotecas e outros locais que são o palco da cultura em nossa cidade.</p>
+            </header>
+
+             <section class="filter-bar">
+                <form>
+                    <div class="filter-group search">
+                        <label for="search">Buscar por nome do espaço</label>
+                        <input type="text" id="search" placeholder="Ex: Praça da Matriz">
+                    </div>
+                    <div class="filter-group">
+                        <label for="type">Tipo de Espaço</label>
+                        <select id="type">
+                            <option>Todos</option>
+                            <option>Teatro</option>
+                            <option>Museu</option>
+                            <option>Biblioteca</option>
+                            <option>Centro Cultural</option>
+                            <option>Praça</option>
+                        </select>
+                    </div>
+                     <div class="filter-group">
+                        <label for="city">Cidade</label>
+                        <select id="city">
+                            <option>Todas</option>
+                            <option>Boa Viagem</option>
+                            <option>Monsenhor Tabosa</option>
+                            <option>Madalena</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="filter-button">Filtrar</button>
+                </form>
+            </section>
+
+            <section class="results-grid">
+                <div class="item-card">
+                    <div class="card-image" style="background-image: url('images/espaco.jpeg');"></div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="card-category">Biblioteca</span>
+                        </div>
+                        <h3 class="card-title">Biblioteca Pública Vivaldo Martins</h3>
+                        <p class="card-subtitle">Acervo com mais de 10 mil livros, aberto à comunidade para pesquisa e leitura. Localizada no centro.</p>
+                        <a href="#" class="card-button">Ver detalhes →</a>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1604928141068-a1835623ab15?q=80&w=1932&auto=format&fit=crop');"></div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="card-category">Praça</span>
+                        </div>
+                        <h3 class="card-title">Praça da Matriz</h3>
+                        <p class="card-subtitle">O coração da cidade, palco de eventos, feiras e encontros culturais ao ar livre.</p>
+                        <a href="#" class="card-button">Ver detalhes →</a>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?q=80&w=1888&auto=format&fit=crop');"></div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                             <span class="card-category">Centro Cultural</span>
+                        </div>
+                        <h3 class="card-title">Casa de Saberes Cego Aderaldo</h3>
+                        <p class="card-subtitle">Espaço multifuncional com exposições, oficinas e auditório para pequenas apresentações e palestras.</p>
+                        <a href="#" class="card-button">Ver detalhes →</a>
+                    </div>
+                </div>
+            </section>
+
+             <nav class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">Próxima →</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2025 Mapa Cultural de Boa Viagem. Uma iniciativa da Secretaria de Cultura.</p>
+            <nav>
+                <a href="#">Sobre o Mapa</a>
+                <a href="#">Termos de Uso</a>
+                <a href="#">Contato</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>

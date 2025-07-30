@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oportunidades - Mapa Cultural de Boa Viagem</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/list-style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/Brasao-novo.jpg" alt="Logo Mapa Cultural">
+                <span>Mapa Cultural <br><strong>Boa Viagem</strong></span>
+            </a>
+            <nav class="main-nav">
+                <a href="agentes.html">Agentes</a>
+                <a href="espacos.html">Espaços</a>
+                <a href="eventos.html">Eventos</a>
+            </nav>
+            <a href="login.html" class="login-button">Entrar</a>
+        </div>
+    </header>
+
+    <main class="list-page">
+        <div class="container">
+            <header class="page-header">
+                <h1>Oportunidades</h1>
+                <p>Inscrições abertas, editais, prêmios e outras chamadas públicas para os agentes culturais da região.</p>
+            </header>
+
+             <section class="filter-bar">
+                <form>
+                    <div class="filter-group search">
+                        <label for="search">Buscar por título da oportunidade</label>
+                        <input type="text" id="search" placeholder="Ex: Edital de Fomento">
+                    </div>
+                    <div class="filter-group">
+                        <label for="type">Tipo de Oportunidade</label>
+                        <select id="type">
+                            <option>Todas</option>
+                            <option>Edital</option>
+                            <option>Oficina</option>
+                            <option>Prêmio</option>
+                            <option>Concurso</option>
+                        </select>
+                    </div>
+                     <div class="filter-group">
+                        <label for="status">Status</label>
+                        <select id="status">
+                            <option>Todos</option>
+                            <option>Inscrições Abertas</option>
+                            <option>Em Andamento</option>
+                            <option>Encerradas</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="filter-button">Filtrar</button>
+                </form>
+            </section>
+
+            <section class="results-grid">
+                <div class="item-card">
+                    <div class="card-image" style="background-image: url('images/oportunidades.jpeg');"></div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="card-category">Edital</span>
+                            <span class="card-status open">Inscrições Abertas</span>
+                        </div>
+                        <h3 class="card-title">Edital de Fomento ao Artesanato Local</h3>
+                        <p class="card-subtitle">Inscrições de 01/08 a 30/09. Promovido pela Secretaria de Cultura para valorizar os artesãos de Boa Viagem.</p>
+                        <a href="#" class="card-button">Ver mais detalhes →</a>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1544716278-e513176f20b5?q=80&w=2067&auto=format&fit=crop');"></div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="card-category">Oficina</span>
+                            <span class="card-status closed">Encerrada</span>
+                        </div>
+                        <h3 class="card-title">Oficina de Xilogravura Sertaneja</h3>
+                        <p class="card-subtitle">Ministrada pelo mestre João Tibúrcio, a oficina explorou as técnicas tradicionais da xilogravura nordestina.</p>
+                        <a href="#" class="card-button">Ver mais detalhes →</a>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070&auto=format&fit=crop');"></div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                             <span class="card-category">Prêmio</span>
+                            <span class="card-status progress">Em Andamento</span>
+                        </div>
+                        <h3 class="card-title">Prêmio de Reconhecimento Mestre da Cultura</h3>
+                        <p class="card-subtitle">Análise dos portfólios em andamento. O resultado será divulgado em breve no portal da prefeitura.</p>
+                        <a href="#" class="card-button">Ver mais detalhes →</a>
+                    </div>
+                </div>
+            </section>
+
+             <nav class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">Próxima →</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2025 Mapa Cultural de Boa Viagem. Uma iniciativa da Secretaria de Cultura.</p>
+            <nav>
+                <a href="#">Sobre o Mapa</a>
+                <a href="#">Termos de Uso</a>
+                <a href="#">Contato</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>

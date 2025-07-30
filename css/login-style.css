@@ -1,0 +1,176 @@
+/* ---- Reset e Configurações Globais ---- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #009A44;      /* Verde principal */
+    --primary-color-dark: #007A33;
+    --secondary-color-blue: #005A9C;
+    --action-color: #FFD700;       /* Amarelo */
+    
+    --white-color: #FFFFFF;
+    --text-color: #343A40;
+    --secondary-text-color: #6c757d;
+    --background-color: #F8F9FA;
+    --border-color: #DEE2E6;
+    --font-family: 'Nunito', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ---- Cabeçalho Simplificado ---- */
+.form-header {
+    background: var(--white-color);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+    width: 100%;
+}
+
+.form-header .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.logo img { height: 50px; margin-right: 10px; border-radius: 50%;}
+.logo span { font-size: 1rem; line-height: 1.2; }
+.logo strong { font-size: 1.2rem; font-weight: 800; color: var(--primary-color); }
+
+
+/* ---- Layout Principal ---- */
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+/* ---- Container do Formulário ---- */
+.form-container {
+    background: var(--white-color);
+    padding: 2.5rem 3rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+.form-container h1 {
+    font-weight: 800;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.form-container .subtitle {
+    text-align: center;
+    color: var(--secondary-text-color);
+    margin-bottom: 2rem;
+}
+
+/* ---- Grupos de Inputs ---- */
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.input-group label a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.input-group label a:hover {
+    text-decoration: underline;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"] {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    transition: border-color 0.3s ease;
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="email"]:focus,
+.input-group input[type="password"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+.input-group input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+
+/* ---- Opções e Links ---- */
+.form-options {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.5rem;
+}
+
+.forgot-password {
+    color: var(--secondary-color-blue);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.submit-button {
+    width: 100%;
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background: var(--primary-color-dark);
+}
+
+.redirect-link {
+    text-align: center;
+    margin-top: 2rem;
+}
+.redirect-link p {
+    color: var(--secondary-text-color);
+}
+.redirect-link a {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-decoration: none;
+}
+.redirect-link a:hover {
+    text-decoration: underline;
+}

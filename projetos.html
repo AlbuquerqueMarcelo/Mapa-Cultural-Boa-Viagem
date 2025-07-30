@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - Mapa Cultural de Boa Viagem</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/list-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/Brasao-novo.jpg" alt="Logo Mapa Cultural">
+                <span>Mapa Cultural <br><strong>Boa Viagem</strong></span>
+            </a>
+            <nav class="main-nav">
+                <a href="agentes.html">Agentes</a>
+                <a href="espacos.html">Espaços</a>
+                <a href="eventos.html">Eventos</a>
+            </nav>
+            <a href="login.html" class="login-button">Entrar</a>
+        </div>
+    </header>
+
+    <main class="list-page">
+        <div class="container">
+            <header class="page-header">
+                <h1>Projetos Culturais</h1>
+                <p>Conheça as iniciativas, ações e projetos de fomento que fortalecem a cadeia produtiva da cultura local.</p>
+            </header>
+
+             <section class="filter-bar">
+                <form>
+                    <div class="filter-group search">
+                        <label for="search">Buscar por nome do projeto</label>
+                        <input type="text" id="search" placeholder="Ex: Memória Viva">
+                    </div>
+                    <div class="filter-group">
+                        <label for="type">Área de Atuação</label>
+                        <select id="type">
+                            <option>Todas</option>
+                            <option>Música</option>
+                            <option>Audiovisual</option>
+                            <option>Cultura Popular</option>
+                            <option>Patrimônio</option>
+                        </select>
+                    </div>
+                     <div class="filter-group">
+                        <label for="proponent">Proponente</label>
+                        <select id="proponent">
+                            <option>Todos</option>
+                            <option>Secretaria de Cultura</option>
+                            <option>Coletivo Artístico</option>
+                            <option>Artista Independente</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="filter-button">Filtrar</button>
+                </form>
+            </section>
+
+            <section class="results-grid">
+                <div class="item-card">
+                    <div class="card-image" style="background-image: url('images/projetos.jpg');"></div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="card-category">Cultura Popular</span>
+                            <span class="card-status open">Em Execução</span>
+                        </div>
+                        <h3 class="card-title">Projeto Memória Viva</h3>
+                        <p class="card-subtitle">Iniciativa de registro da história oral dos mestres e mestras da cultura de Boa Viagem. Proponente: Secult.</p>
+                        <a href="#" class="card-button">Saber mais →</a>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1634543333333-272974b739d4?q=80&w=2070&auto=format&fit=crop');"></div>
+                    <div class="card-content">
+                        <div class="card-tags">
+                            <span class="card-category">Audiovisual</span>
+                            <span class="card-status closed">Finalizado</span>
+                        </div>
+                        <h3 class="card-title">Cine Sertão Itinerante</h3>
+                        <p class="card-subtitle">Projeto que levou sessões de cinema gratuitas para as comunidades rurais do município durante o ano de 2024.</p>
+                        <a href="#" class="card-button">Saber mais →</a>
+                    </div>
+                </div>
+            </section>
+
+             <nav class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">Próxima →</a>
+            </nav>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2025 Mapa Cultural de Boa Viagem. Uma iniciativa da Secretaria de Cultura.</p>
+            <nav>
+                <a href="#">Sobre o Mapa</a>
+                <a href="#">Termos de Uso</a>
+                <a href="#">Contato</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>

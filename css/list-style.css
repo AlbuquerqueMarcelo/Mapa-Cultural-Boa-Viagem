@@ -1,0 +1,217 @@
+/* ============================================= */
+/* CSS para Páginas de Listagem (Agentes, etc.)  */
+/* ============================================= */
+
+/* ---- Estilo do Cabeçalho da Página ---- */
+/* Formata o título principal como "Agentes Culturais" */
+.page-header {
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 3rem; /* Espaço abaixo do cabeçalho */
+}
+
+.page-header h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #343A40; /* Cinza escuro */
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    color: #6c757d; /* Cinza secundário */
+    max-width: 600px; /* Evita que o parágrafo fique muito largo em telas grandes */
+    margin: 0.5rem auto 0; /* Centraliza o bloco do parágrafo */
+}
+
+
+/* ---- Barra de Filtros ---- */
+/* Estilo do container que envolve os filtros de busca */
+.filter-bar {
+    background-color: #FFFFFF; /* Fundo branco */
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #DEE2E6; /* Borda cinza clara */
+    margin-bottom: 3rem;
+}
+
+/* Usamos Flexbox para alinhar os filtros e o botão */
+.filter-bar form {
+    display: flex;
+    align-items: flex-end; /* Alinha os itens na parte de baixo, para que o botão fique alinhado com os inputs */
+    gap: 1.5rem; /* Espaço entre os filtros */
+    flex-wrap: wrap; /* Permite que os filtros quebrem para a linha de baixo em telas menores */
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column; /* Deixa o label em cima do input/select */
+    flex-grow: 1; /* Faz com que os grupos de filtro cresçam para ocupar o espaço disponível */
+}
+
+/* Faz o campo de busca ser um pouco maior que os outros */
+.filter-group.search {
+    flex-grow: 2;
+}
+
+.filter-group label {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Estilo padrão para os campos de texto e caixas de seleção */
+.filter-group input,
+.filter-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #DEE2E6; /* Borda cinza clara */
+    border-radius: 4px;
+    font-family: 'Nunito', sans-serif; /* Garante a mesma fonte do site */
+    font-size: 1rem;
+    background-color: #FFFFFF;
+}
+
+/* Estilo do botão de Filtrar */
+.filter-button {
+    background-color: #009A44; /* Verde principal */
+    color: #FFFFFF; /* Texto branco */
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Efeito suave de transição */
+}
+
+.filter-button:hover {
+    background-color: #007A33; /* Verde mais escuro */
+}
+
+
+/* ---- Grade de Resultados ---- */
+/* Usamos CSS Grid para criar uma galeria de cards que se ajusta automaticamente */
+.results-grid {
+    display: grid;
+    /* Cria colunas de no mínimo 280px. O navegador preenche com quantas colunas couberem. */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem; /* Espaço entre os cards */
+    margin-bottom: 3rem;
+}
+
+/* ---- Card Individual ---- */
+/* Estilo de cada card de agente cultural */
+.item-card {
+    background-color: #FFFFFF; /* Fundo branco */
+    border-radius: 8px;
+    overflow: hidden; /* Garante que a imagem não "vaze" das bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Sombra suave */
+    display: flex;
+    flex-direction: column; /* Organiza o card com a imagem em cima e o conteúdo embaixo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de "levantar" o card ao passar o mouse */
+.item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.card-image {
+    height: 180px; /* Altura fixa para a imagem */
+    background-size: cover; /* Faz a imagem cobrir todo o espaço, cortando se necessário */
+    background-position: center; /* Centraliza a imagem */
+}
+
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Faz esta área crescer para que todos os cards tenham a mesma altura */
+}
+
+/* NOVO: container para as tags, para que fiquem na mesma linha */
+.card-tags {
+    display: flex;
+    gap: 0.5rem; /* Espaço entre as tags */
+    margin-bottom: 1rem;
+}
+
+.card-category {
+    background-color: #eee; /* Fundo cinza claro para a "tag" */
+    color: #343A40;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    align-self: flex-start; /* Evita que a tag estique para a largura total */
+}
+
+/* NOVO: Estilo para a tag de status da oportunidade */
+.card-status {
+    color: #FFFFFF;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.card-status.open {
+    background-color: #009A44; /* Verde para "Inscrições Abertas" */
+}
+
+.card-status.closed {
+    background-color: #6c757d; /* Cinza para "Encerrada" */
+}
+
+.card-status.progress {
+    background-color: #005A9C; /* Azul para "Em Andamento" */
+}
+
+.card-title {
+    font-weight: 800;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+    color: #6c757d; /* Cinza secundário */
+    line-height: 1.6;
+    flex-grow: 1; /* Faz o subtítulo crescer, empurrando o botão "Ver perfil" para baixo */
+    margin-bottom: 1.5rem;
+}
+
+.card-button {
+    text-decoration: none;
+    color: #009A44; /* Verde principal */
+    font-weight: 700;
+}
+
+
+/* ---- Paginação ---- */
+/* Estilo dos links de navegação entre páginas */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem; /* Espaço entre os números */
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #6c757d; /* Cinza secundário */
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o mouse em um número da página */
+.pagination a:hover {
+    background-color: #eee;
+    color: #343A40;
+}
+
+/* Estilo do número da página ativa */
+.pagination a.active {
+    background-color: #009A44; /* Verde principal */
+    color: #FFFFFF; /* Texto branco */
+}
