@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="admin-wrapper">
-        <aside class="admin-sidebar">
+        <aside class="admin-sidebar" id="admin-sidebar">
             <div class="sidebar-logo">
                 <a href="index.html" class="logo">
                     <img src="images/Brasao-novo.jpg" alt="Logo Mapa Cultural">
@@ -33,9 +33,18 @@
 
         <main class="admin-content">
             <header class="admin-header">
-                <h1>Meu Perfil</h1>
-                <p>Mantenha suas informações públicas e de acesso sempre atualizadas.</p>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div>
+                    <h1>Meu Perfil</h1>
+                    <p>Mantenha suas informações públicas e de acesso sempre atualizadas.</p>
+                </div>
             </header>
+
+            <a href="admin.html" class="breadcrumb-link">&larr; Voltar ao Painel</a>
 
             <form class="profile-form">
                 <div class="form-section">
@@ -107,5 +116,21 @@
             </form>
         </main>
     </div>
+    <div class="overlay" id="overlay"></div>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const sidebar = document.getElementById('admin-sidebar');
+        const overlay = document.getElementById('overlay');
+
+        function toggleAdminMenu() {
+            sidebar.classList.toggle('is-open');
+            overlay.classList.toggle('is-active');
+            mobileMenuBtn.classList.toggle('is-active');
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleAdminMenu);
+        overlay.addEventListener('click', toggleAdminMenu);
+    </script>
 </body>
 </html>
