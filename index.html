@@ -1,212 +1,155 @@
-
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Cultural de Boa Viagem</title>
+    <meta name="description" content="Encontre eventos culturais, apresentações e atividades em Palmares, Pernambuco.">
+    <title>Cultural | Agenda Cultural de Palmares</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-
     <header class="main-header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="images/Brasao-novo.jpg" alt="Logo Mapa Cultural">
-                <span>Mapa Cultural <br><strong>Boa Viagem</strong></span>
+                <img src="images/Brasao-novo.jpg" alt="Logo do Cultural">
+                <span>Cultural<br><strong>Agenda Cultural de Palmares</strong></span>
             </a>
-            
             <a href="login.html" class="login-button">Entrar</a>
         </div>
     </header>
 
     <main>
-
         <section class="hero-search">
             <div class="container">
-                <h1>Explore a cultura de Boa Viagem</h1>
-                <div class="search-bar">
-                    <input type="text" placeholder="Busque por nome, cidade, área de atuação...">
+                <h1>Descubra a cultura de Palmares</h1>
+                <p>Encontre eventos, conheça atividades culturais e participe da programação da cidade.</p>
+                <form class="search-bar" action="eventos.html" method="get">
+                    <input type="search" name="busca" aria-label="Buscar eventos" placeholder="Busque por nome, categoria ou data...">
                     <button type="submit">Buscar</button>
-                </div>
+                </form>
             </div>
         </section>
 
         <section class="new-section category-section">
-            <div class="container" data-aos="fade-up">
+            <div class="container">
                 <div class="section-header-alt">
-                    <h2>Navegue por Categorias</h2>
-                    <p>Encontre o que você procura em nosso mapa cultural.</p>
+                    <h2>Explore por categorias</h2>
+                    <p>Encontre atividades culturais que combinam com seus interesses.</p>
                 </div>
 
                 <div class="category-cards-grid">
-                    <a href="oportunidades.html" class="card-link">
+                    <a href="eventos.html?categoria=musica" class="card-link">
                         <div class="category-card">
-                            <img src="https://img.icons8.com/ios-filled/50/009A44/star--v1.png" alt="Ícone Oportunidades" class="card-icon">
-                            <h3>Oportunidades</h3>
-                            <p>Editais, oficinas, prêmios e concursos para a comunidade cultural.</p>
-                            <span class="card-button">Ver todos →</span>
+                            <img src="https://img.icons8.com/ios-filled/50/009A44/musical-notes.png" alt="" class="card-icon">
+                            <h3>Música</h3>
+                            <p>Shows, apresentações e encontros musicais.</p>
+                            <span class="card-button">Ver eventos →</span>
                         </div>
                     </a>
 
-                    <a href="eventos.html" class="card-link">
+                    <a href="eventos.html?categoria=teatro" class="card-link">
                         <div class="category-card">
-                            <img src="https://img.icons8.com/ios-filled/50/009A44/event-accepted.png" alt="Ícone Eventos" class="card-icon">
-                            <h3>Eventos</h3>
-                            <p>Pesquise e divulgue shows, festivais e outras atividades culturais.</p>
-                            <span class="card-button">Ver todos →</span>
+                            <img src="https://img.icons8.com/ios-filled/50/009A44/theatre-mask.png" alt="" class="card-icon">
+                            <h3>Teatro</h3>
+                            <p>Espetáculos e apresentações teatrais.</p>
+                            <span class="card-button">Ver eventos →</span>
                         </div>
                     </a>
 
-                    <a href="espacos.html" class="card-link">
+                    <a href="eventos.html?categoria=danca" class="card-link">
                         <div class="category-card">
-                            <img src="https://img.icons8.com/ios-filled/50/009A44/museum.png" alt="Ícone Espaços" class="card-icon">
-                            <h3>Espaços</h3>
-                            <p>Encontre teatros, centros culturais, museus e outros locais.</p>
-                            <span class="card-button">Ver todos →</span>
+                            <img src="https://img.icons8.com/ios-filled/50/009A44/dancing.png" alt="" class="card-icon">
+                            <h3>Dança</h3>
+                            <p>Apresentações e atividades de dança.</p>
+                            <span class="card-button">Ver eventos →</span>
                         </div>
                     </a>
 
-                    <a href="agentes.html" class="card-link">
+                    <a href="eventos.html?categoria=cultura-popular" class="card-link">
                         <div class="category-card">
-                            <img src="https://img.icons8.com/ios-filled/50/009A44/user-group-man-man.png" alt="Ícone Agentes" class="card-icon">
-                            <h3>Agentes</h3>
-                            <p>Conheça os artistas, produtores e grupos que movimentam a cultura.</p>
-                            <span class="card-button">Ver todos →</span>
+                            <img src="https://img.icons8.com/ios-filled/50/009A44/star--v1.png" alt="" class="card-icon">
+                            <h3>Cultura popular</h3>
+                            <p>Tradições e manifestações culturais da região.</p>
+                            <span class="card-button">Ver eventos →</span>
                         </div>
                     </a>
-                    
-                    <a href="projetos.html" class="card-link">
+
+                    <a href="eventos.html?categoria=literatura" class="card-link">
                         <div class="category-card">
-                            <img src="https://img.icons8.com/ios-filled/50/009A44/folder-invoices.png" alt="Ícone Projetos" class="card-icon">
-                            <h3>Projetos</h3>
-                            <p>Descubra leis de fomento, editais e outras iniciativas cadastradas.</p>
-                            <span class="card-button">Ver todos →</span>
+                            <img src="https://img.icons8.com/ios-filled/50/009A44/book.png" alt="" class="card-icon">
+                            <h3>Literatura</h3>
+                            <p>Feiras, encontros literários e atividades de leitura.</p>
+                            <span class="card-button">Ver eventos →</span>
+                        </div>
+                    </a>
+
+                    <a href="eventos.html?categoria=outros" class="card-link">
+                        <div class="category-card">
+                            <img src="https://img.icons8.com/ios-filled/50/009A44/paint-palette.png" alt="" class="card-icon">
+                            <h3>Artesanato e outros</h3>
+                            <p>Exposições, artesanato e atividades comunitárias.</p>
+                            <span class="card-button">Ver eventos →</span>
                         </div>
                     </a>
                 </div>
             </div>
         </section>
-        
+
         <section class="new-section featured-section">
             <div class="container">
                 <div class="section-header-alt">
-                    <h2>Em destaque</h2>
-                    <p>Confira os destaques mais recentes de cada uma das áreas.</p>
+                    <h2>Eventos em destaque</h2>
+                    <p>Confira a programação cultural de Palmares.</p>
                 </div>
-                <div class="tabs">
-                    <button class="tab-link active">Todos</button>
-                    <button class="tab-link">Agentes</button>
-                    <button class="tab-link">Projetos</button>
-                </div>
+
                 <div class="featured-cards-container">
                     <div class="featured-card">
-                        <span class="card-tag">Projeto</span>
-                        <h3>25ª Feira Pan-Amazônica do Livro</h3>
-                        <p>SECULT</p>
-                        <a href="evento-detalhe.html">Acessar →
+                        <span class="card-tag">Agenda cultural</span>
+                        <h3>Descubra os próximos eventos</h3>
+                        <p>Encontre atividades culturais disponíveis no município.</p>
+                        <a href="eventos.html">Consultar agenda →</a>
                     </div>
-                    <div class="featured-card">
-                         <span class="card-tag">Projeto</span>
-                        <h3>25ª Feira Pan-Amazônica do Livro</h3>
-                        <p>SECULT</p>
-                        <a href="evento-detalhe.html">Acessar →
-                    </div>
-                    <div class="featured-card">
-                         <span class="card-tag">Agente</span>
-                        <h3>Coletivo de Artes Urbanas</h3>
-                        <p>Boa Viagem - CE</p>
-                        <a href="evento-detalhe.html">Acessar →
-                    </div>
-                    <div class="featured-card">
-                         <span class="card-tag">Evento</span>
-                        <h3>Mostra de Cinema do Sertão</h3>
-                        <p>Online</p>
-                        <a href="evento-detalhe.html">Acessar →
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="new-section reports-section">
-            <div class="container">
-                <div class="reports-intro">
-                    <div class="reports-text">
-                        <h2>Relatórios</h2>
-                        <p>Acesse o painel de dados ao clicar no botão abaixo para visualizar gráficos e outras informações importantes para consulta e análise.</p>
-                        <a href="" class="cta-button-white">Confira todos os painéis</a>
+                    <div class="featured-card">
+                        <span class="card-tag">Cultura local</span>
+                        <h3>Conheça as atividades culturais</h3>
+                        <p>Explore eventos de diferentes categorias.</p>
+                        <a href="eventos.html">Explorar eventos →</a>
                     </div>
-                    <div class="reports-illustration">
-                        
-                    </div>
-                </div>
-                <div class="stats-grid">
-                    <div class="stat-card green-border">
-                        <h4>Oportunidade</h4>
-                        <div class="stat-numbers">
-                            <div><strong>270</strong><span>iniciativas criadas</span></div>
-                            <div><strong>152</strong><span>iniciativas certificadas</span></div>
-                        </div>
-                        <a href="relatorios.html" class="stat-button">Conferir painel de dados</a>
-                    </div>
-                    <div class="stat-card blue-border">
-                         <h4>Agentes Coletivos</h4>
-                        <div class="stat-numbers">
-                            <div><strong>1293</strong><span>agentes cadastrados</span></div>
-                             <div><strong>0</strong><span>certificados</span></div>
-                        </div>
-                        <a href="" class="stat-button">Conferir painel de dados</a>
-                    </div>
-                    <div class="stat-card yellow-border">
-                        <h4>Agentes Individuais</h4>
-                        <div class="stat-numbers">
-                            <div><strong>28819</strong><span>agentes cadastrados</span></div>
-                        </div>
-                        <a href="relatorios.html" class="stat-button">Conferir painel de dados</a>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="new-section map-section">
-            <div class="container">
-                 <div class="section-header-alt">
-                    <h2>Visualize também no mapa</h2>
-                </div>
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63600.56943714656!2d-39.77128674863283!3d-5.118617899999991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a317c2a7a59999%3A0x8898bff995a99566!2sBoa%20Viagem%20-%20CE!5e0!3m2!1spt-BR!2sbr!4v1690381902092!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="featured-card">
+                        <span class="card-tag">Palmares-PE</span>
+                        <h3>Participe da cultura da cidade</h3>
+                        <p>Consulte datas, horários e locais dos eventos.</p>
+                        <a href="eventos.html">Ver programação →</a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="new-section cta-section">
             <div class="container">
-                <h2>Faça seu cadastro e colabore com o Mapa Cultural</h2>
-                <p>Contribua com a plataforma livre e interativa de mapeamento do cenário cultural e instrumento de governança digital no aprimoramento da gestão pública, dos mecanismos de participação e da democratização do acesso às políticas culturais.</p>
-                <a href="cadastro.html" class="cta-button-white-arrow">Fazer Cadastro →</a>
+                <h2>Faça parte da cultura de Palmares</h2>
+                <p>Encontre eventos, acompanhe a programação cultural e descubra iniciativas que valorizam a cultura local.</p>
+                <a href="cadastro.html" class="cta-button-white-arrow">Fazer cadastro →</a>
             </div>
         </section>
     </main>
 
     <footer class="main-footer">
         <div class="container">
-            <p>© 2025 Mapa Cultural de Boa Viagem. Uma iniciativa da Secretaria de Cultura.</p>
-            <nav>
-                <a href="#">Sobre o Mapa</a>
-                <a href="#">Termos de Uso</a>
-                <a href="#">Contato</a>
+            <p>© 2026 Cultural — Agenda Cultural de Palmares</p>
+            <nav aria-label="Links do rodapé">
+                <a href="index.html">Início</a>
+                <a href="eventos.html">Agenda cultural</a>
+                <a href="cadastro-evento.html">Cadastrar evento</a>
             </nav>
         </div>
     </footer>
-
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
 </body>
 </html>
+```
